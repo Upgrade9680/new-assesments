@@ -31,15 +31,15 @@ const Landingpage = () => {
           <div>
             <div>Connecting Cyber Networks, Empowering Your Future</div>
             <div className="flex items-center gap-2 mt-1">
-              <img src={Call} alt="call" className="w-4 h-4" />
-              <span>+91 77770 97791</span>
+              <img src={Call} alt="call" className="w-6 h-6" />
+              <span className="text-xs font-bold">+91 77770 97791</span>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
-            <img src={Call} alt="call" className="w-5 h-5" />
-            <span>+91 77770 97791</span>
-            <img src={whatsapp} alt="whatsapp" className="w-5 h-5" />
+            <img src={Call} alt="call" className="w-6 h-6" />
+            <span className="text-xs font-bold">+91 77770 97791</span>
+            <img src={whatsapp} alt="whatsapp" className="w-8 h-8" />
           </div>
         </div>
       </div>
