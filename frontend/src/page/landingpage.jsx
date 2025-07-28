@@ -26,32 +26,38 @@ const Landingpage = () => {
 
   return (
     <div className="w-full">
-      <div className="bg-[#ff2056]">
-        <div className="flex items-center px-20 justify-between  py-1 text-white text-xs max-w-7xl mx-auto">
-          <div>
-            <div>Connecting Cyber Networks, Empowering Your Future</div>
+      {/* 🔴 Top Info Bar */}
+      <div className="bg-[#ff2056] w-full">
+        <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row justify-between items-start sm:items-center text-white text-xs gap-2">
+          <div className="w-full sm:w-auto">
+            <p className="font-medium text-sm">
+              Connecting Cyber Networks, Empowering Your Future
+            </p>
             <div className="flex items-center gap-2 mt-1">
-              <img src={Call} alt="call" className="w-6 h-6" />
-              <span className="text-xs font-bold">+91 77770 97791</span>
+              <img src={Call} alt="call" className="w-4 h-4" />
+              <span className="font-semibold text-sm">+91 77770 97791</span>
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <img src={Call} alt="call" className="w-6 h-6" />
-            <span className="text-xs font-bold">+91 77770 97791</span>
-            <img src={whatsapp} alt="whatsapp" className="w-8 h-8" />
+          <div className="flex items-center gap-3 sm:self-auto self-end">
+            <img src={Call} alt="call" className="w-5 h-5" />
+            <span className="font-semibold text-sm">+91 77770 97791</span>
+            <img src={whatsapp} alt="whatsapp" className="w-5 h-5" />
           </div>
         </div>
       </div>
 
-      <div className="bg-white not-[]: sticky top-0 z-50 border-b shadow-md">
-        <div className="flex px-20 justify-between items-center p-2 max-w-7xl mx-auto">
+      {/* 🟡 Sticky Navbar */}
+      <div className="sticky top-0 z-50 bg-white border-b shadow-md w-full">
+        <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+          {/* Logo */}
           <img
             src={CompanyLogo}
             alt="Company Logo"
-            className="pl-2 w-28 h-10"
+            className="w-28 h-10 object-contain"
           />
 
+          {/* Desktop CTA */}
           <a
             href="#enquiry-form"
             className="hidden lg:inline-block rounded-md bg-[#ff2056] px-6 py-2 text-xs font-semibold text-white shadow"
@@ -59,20 +65,22 @@ const Landingpage = () => {
             ENQUIRE NOW
           </a>
 
+          {/* Mobile Menu Toggle */}
           <button className="lg:hidden p-2" onClick={toggleMenu}>
             {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-[#000]" />
+              <X className="h-6 w-6 text-[#ff2056]" />
             ) : (
-              <Menu className="h-6 w-6 text-[#000]" />
+              <Menu className="h-6 w-6 text-[#ff2056]" />
             )}
           </button>
         </div>
 
+        {/* Mobile Dropdown */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white shadow-inner px-2 pb-4 pt-4">
+          <div className="lg:hidden bg-white shadow-inner px-4 pb-4">
             <a
               href="#enquiry-form"
-              className="block w-30 text-center rounded-md bg-[#ff2056] px-2 py-1 text-xs font-semibold text-white shadow"
+              className="block w-full text-center rounded-md bg-[#ff2056] px-6 py-2 text-sm font-semibold text-white shadow"
               onClick={() => setMobileMenuOpen(false)}
             >
               ENQUIRE NOW
@@ -81,6 +89,7 @@ const Landingpage = () => {
         )}
       </div>
 
+      {/* 🔵 Page Sections */}
       <Background />
       <Section1 />
       <Section2 />
