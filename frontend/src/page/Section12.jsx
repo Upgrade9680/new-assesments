@@ -22,7 +22,7 @@ const Section12 = () => {
               <img
                 src="https://www.connectingcybernetworks.com/images/logo%20try-01.png"
                 alt="Connecting Cyber Networks Logo"
-                className="h-auto w-52 object-contain"
+                className="h-auto w-35 object-contain"
               />
             </div>
             <p className="mb-8 max-w-xs text-sm leading-relaxed text-gray-700">
@@ -33,28 +33,28 @@ const Section12 = () => {
               <a
                 href="https://www.facebook.com/connectingcybernetworks"
                 aria-label="Facebook"
-                className="rounded-full p-2 transition hover:bg-indigo-50 hover:text-indigo-700"
+                className="rounded-full p-2 transition hover:bg-indigo-50 hover:text-[#ff2056]"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="https://x.com/ccn_mumbai"
                 aria-label="Twitter"
-                className="rounded-full p-2 transition hover:bg-indigo-50 hover:text-indigo-700"
+                className="rounded-full p-2 transition hover:bg-indigo-50 hover:text-[#ff2056]"
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="https://www.linkedin.com/company/connecting-cyber-networks/"
                 aria-label="LinkedIn"
-                className="rounded-full p-2 transition hover:bg-indigo-50 hover:text-indigo-700"
+                className="rounded-full p-2 transition hover:bg-indigo-50 hover:text-[#ff2056]"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="https://www.instagram.com/connectingcybernetworks_ccn/?hl=en"
                 aria-label="Instagram"
-                className="rounded-full p-2 transition hover:bg-indigo-50 hover:text-indigo-700"
+                className="rounded-full p-2 transition hover:bg-indigo-50 hover:text-[#ff2056]"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -68,7 +68,7 @@ const Section12 = () => {
             </h4>
             <ul className="space-y-6 text-sm text-gray-700">
               <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-5 w-5 text-pink-600" />
+                <MapPin className="mt-0.5 h-15 w-15 text-pink-600" />
                 <span>
                   Vaastu Darshan, B-602, Gundawali Azad Rd, Near BMC Ward
                   Office, Azad Nagar, Andheri East, Mumbai, Maharashtra 400069
@@ -109,17 +109,17 @@ const Section12 = () => {
             </h4>
             <ul className="space-y-4 text-sm text-gray-700">
               <li>
-                <a href="#" className="transition hover:text-indigo-600">
+                <a href="#" className="transition hover:text-[#ff2056]">
                   Cyber Security Associate
                 </a>
               </li>
               <li>
-                <a href="#" className="transition hover:text-indigo-600">
+                <a href="#" className="transition hover:text-[#ff2056]">
                   Cyber Security Professional
                 </a>
               </li>
               <li>
-                <a href="#" className="transition hover:text-indigo-600">
+                <a href="#" className="transition hover:text-[#ff2056]">
                   Cyber Security Expert
                 </a>
               </li>
@@ -137,17 +137,17 @@ const Section12 = () => {
           </p>
           <ul className="flex flex-wrap gap-6 text-gray-600">
             <li>
-              <a href="#" className="transition hover:text-indigo-600">
+              <a href="#" className="transition hover:text-[#ff2056]">
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="#" className="transition hover:text-indigo-600">
+              <a href="#" className="transition hover:text-[#ff2056]">
                 Terms of Service
               </a>
             </li>
             <li>
-              <a href="#" className="transition hover:text-indigo-600">
+              <a href="#" className="transition hover:text-[#ff2056]">
                 Cookie Policy
               </a>
             </li>

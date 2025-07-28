@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
-  // ... your same testimonials
   {
     name: 'NEHA SHARMA',
     location: 'Pune',
@@ -16,92 +15,142 @@ const testimonials = [
   {
     name: 'RAHUL VERMA',
     location: 'Delhi',
-    course: 'Cyber Security',
-    image: 'https://cdn-icons-png.flaticon.com/512/9187/9187604.png',
+    course: 'Ethical Hacking',
+    image: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
     review:
-      'The hands-on labs and real-world scenarios helped me grasp complex topics easily. Ashish Sir and the team genuinely care about student success. I cracked my interview at Wipro on the first attempt!',
+      'Great course with real-world labs. The team ensures every doubt is solved and offers full placement support!',
     stars: 5,
-    link: 'https://maps.app.goo.gl/XYZ456def2',
+    link: 'https://maps.app.goo.gl/XYZ456abc2',
   },
   {
-    name: 'PRIYA YADAV',
-    location: 'Bangalore',
-    course: 'Cyber Security',
-    image: 'https://cdn-icons-png.flaticon.com/512/9187/9187604.png',
+    name: 'ANJALI MEHRA',
+    location: 'Mumbai',
+    course: 'Network Security',
+    image: 'https://cdn-icons-png.flaticon.com/512/921/921071.png',
     review:
-      'From beginner to professional, my journey with CCN was transformative. The structured curriculum and expert guidance helped me land a job as a Network Security Analyst at Infosys.',
+      'Perfect platform to switch to a cybersecurity career. Trainers are supportive, content is job-ready!',
     stars: 5,
-    link: 'https://maps.app.goo.gl/LMN789uvw3',
+    link: 'https://maps.app.goo.gl/DEF789ghi3',
   },
   {
-    name: 'SACHIN RAO',
+    name: 'VIKAS SINGH',
     location: 'Hyderabad',
-    course: 'Cyber Security',
-    image: 'https://cdn-icons-png.flaticon.com/512/9187/9187604.png',
+    course: 'Penetration Testing',
+    image: 'https://cdn-icons-png.flaticon.com/512/236/236831.png',
     review:
-      'If you’re serious about a career in cybersecurity, look no further. The institute offers amazing content and placement support. I’m currently working with a top MNC thanks to their guidance.',
+      'I never imagined I’d enjoy learning so much. CCN’s hands-on labs gave me the confidence to crack interviews easily.',
     stars: 5,
-    link: 'https://maps.app.goo.gl/TUV101abc4',
+    link: 'https://maps.app.goo.gl/GHI123jkl4',
   },
   {
-    name: 'KAVITA JAIN',
-    location: 'Ahmedabad',
-    course: 'Cyber Security',
-    image: 'https://cdn-icons-png.flaticon.com/512/9187/9187604.png',
+    name: 'PRIYA NAIR',
+    location: 'Kochi',
+    course: 'Cloud Security',
+    image: 'https://cdn-icons-png.flaticon.com/512/847/847969.png',
     review:
-      'The team at CCN not only taught us technical skills but also helped build our confidence. I had no IT background and still got placed in a security role. Eternally grateful!',
+      'Clear concepts, structured learning path, and continuous mentoring — highly recommend CCN to all aspiring cyber professionals.',
     stars: 5,
-    link: 'https://maps.app.goo.gl/HJK123ghi5',
+    link: 'https://maps.app.goo.gl/JKL456mno5',
   },
   {
-    name: 'ROHIT KUMAR',
-    location: 'Chennai',
-    course: 'Cyber Security',
-    image: 'https://cdn-icons-png.flaticon.com/512/9187/9187604.png',
+    name: 'ARUN KUMAR',
+    location: 'Bangalore',
+    course: 'SOC Training',
+    image: 'https://cdn-icons-png.flaticon.com/512/706/706830.png',
     review:
-      "Ashish Sir's teaching style is unique—he simplifies even the toughest concepts. I highly recommend CCN to anyone looking to enter cybersecurity. Great value and great team.",
+      'Within 3 months of joining CCN, I landed a job in a reputed MNC. The training is completely aligned with industry needs.',
     stars: 5,
-    link: 'https://maps.app.goo.gl/DEF456jkl6',
+    link: 'https://maps.app.goo.gl/MNO789pqr6',
   },
   {
-    name: 'ANITA GUPTA',
-    location: 'Lucknow',
-    course: 'Cyber Security',
-    image: 'https://cdn-icons-png.flaticon.com/512/9187/9187604.png',
-    review:
-      'The personalized mentorship I received here was unmatched. I felt supported throughout the course. I am now working in an L1 Security Operations Center thanks to CCN’s placement help.',
-    stars: 5,
-    link: 'https://maps.app.goo.gl/PQR321mno7',
-  },
-  {
-    name: 'MOHD FAISAL',
+    name: 'SNEHA GUPTA',
     location: 'Jaipur',
-    course: 'Cyber Security',
-    image: 'https://cdn-icons-png.flaticon.com/512/9187/9187604.png',
+    course: 'Red Teaming',
+    image: 'https://cdn-icons-png.flaticon.com/512/2922/2922656.png',
     review:
-      'Best institute for anyone looking to break into the cybersecurity industry. They focus on practical knowledge which really helps during job interviews and on-the-job tasks.',
+      'Exceptional instructors and real-world scenarios! I gained confidence and skills I couldn’t find anywhere else.',
     stars: 5,
-    link: 'https://maps.app.goo.gl/STU654pqr8',
+    link: 'https://maps.app.goo.gl/PQR123stu7',
   },
   {
-    name: 'DIVYA RANI',
-    location: 'Kolkata',
-    course: 'Cyber Security',
-    image: 'https://cdn-icons-png.flaticon.com/512/9187/9187604.png',
+    name: 'MOHIT RANA',
+    location: 'Chandigarh',
+    course: 'Cyber Forensics',
+    image: 'https://cdn-icons-png.flaticon.com/512/1999/1999625.png',
     review:
-      'I joined as a complete beginner but the structured approach and expert trainers helped me grasp networking, firewalls, and incident response. Today I’m employed and confident in my role.',
+      'The course material, mock interviews, and support team are top-notch. I’m proud to be part of the CCN alumni.',
     stars: 5,
-    link: 'https://maps.app.goo.gl/XYZ987stu9',
+    link: 'https://maps.app.goo.gl/STU456vwx8',
   },
   {
-    name: 'SANDEEP KUMAR',
+    name: 'KAVYA IYER',
+    location: 'Chennai',
+    course: 'Bug Bounty Hunting',
+    image: 'https://cdn-icons-png.flaticon.com/512/4140/4140048.png',
+    review:
+      'I started from scratch and now earn through bug bounty platforms. CCN made me independent and skilled!',
+    stars: 5,
+    link: 'https://maps.app.goo.gl/VWX789yz1',
+  },
+  {
+    name: 'RAJAN MEHRA',
+    location: 'Ahmedabad',
+    course: 'Firewall Security',
+    image: 'https://cdn-icons-png.flaticon.com/512/2202/2202112.png',
+    review:
+      'From basic to advanced — every topic was covered deeply. The trainers are always available to help.',
+    stars: 5,
+    link: 'https://maps.app.goo.gl/YZ123abc3',
+  },
+  {
+    name: 'ISHA SINGH',
     location: 'Indore',
-    course: 'Cyber Security',
-    image: 'https://cdn-icons-png.flaticon.com/512/9187/9187604.png',
+    course: 'SIEM Tools',
+    image: 'https://cdn-icons-png.flaticon.com/512/168/168882.png',
     review:
-      'The classes were interactive and always up-to-date with industry needs. Resume preparation, mock interviews, and career guidance all helped me land my current job.',
+      'Best place to get SIEM training with live tools. CCN’s lab environment is impressive and easy to access.',
     stars: 5,
-    link: 'https://maps.app.goo.gl/ABC000vwx0',
+    link: 'https://maps.app.goo.gl/DEF456ghi4',
+  },
+  {
+    name: 'TARUN DAS',
+    location: 'Kolkata',
+    course: 'Blue Team Operations',
+    image: 'https://cdn-icons-png.flaticon.com/512/145/145867.png',
+    review:
+      'Team CCN helps you grow with confidence. The real-time simulations and attack-defense modules are unique.',
+    stars: 5,
+    link: 'https://maps.app.goo.gl/GHI789jkl5',
+  },
+  {
+    name: 'MEENA YADAV',
+    location: 'Bhopal',
+    course: 'Linux for Hackers',
+    image: 'https://cdn-icons-png.flaticon.com/512/3135/3135789.png',
+    review:
+      'CCN’s Linux training helped me strengthen my foundation in cybersecurity. The mentors are experienced and friendly.',
+    stars: 5,
+    link: 'https://maps.app.goo.gl/JKL123mno6',
+  },
+  {
+    name: 'AMAN SHAH',
+    location: 'Nagpur',
+    course: 'Python for Security',
+    image: 'https://cdn-icons-png.flaticon.com/512/3904/3904678.png',
+    review:
+      'Loved the scripting projects and automation tips. I now automate security tasks at my job thanks to CCN.',
+    stars: 5,
+    link: 'https://maps.app.goo.gl/MNO456pqr7',
+  },
+  {
+    name: 'DEEPIKA RAI',
+    location: 'Lucknow',
+    course: 'CompTIA Security+',
+    image: 'https://cdn-icons-png.flaticon.com/512/206/206881.png',
+    review:
+      'CCN’s structured approach helped me clear my Security+ exam in the first attempt. Highly recommended!',
+    stars: 5,
+    link: 'https://maps.app.goo.gl/PQR789stu8',
   },
 ];
 
@@ -121,19 +170,14 @@ const Section8 = () => {
   const totalPages = Math.ceil(testimonials.length / cardsPerView);
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => Math.max(prev - cardsPerView, 0));
+    setCurrentIndex((prev) => Math.max(prev - 1, 0));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) =>
-      Math.min(prev + cardsPerView, (totalPages - 1) * cardsPerView)
-    );
+    setCurrentIndex((prev) => Math.min(prev + 1, totalPages - 1));
   };
 
-  const visibleTestimonials = testimonials.slice(
-    currentIndex,
-    currentIndex + cardsPerView
-  );
+  const translateX = -(currentIndex * (100 / cardsPerView));
 
   return (
     <section className="relative overflow-hidden bg-white py-20">
@@ -146,63 +190,65 @@ const Section8 = () => {
           What our learners say
         </h2>
 
-        {/* Cards Container */}
-        <div className="relative mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6 transition-all duration-300">
-          {visibleTestimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="w-full px-2 transition-all duration-300 ease-in-out"
-            >
-              <div className="group relative h-full rounded-lg bg-white p-6 shadow-md sm:p-8">
-                <div className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-br from-indigo-400/30 via-sky-400/20 to-purple-400/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
-                <div className="mb-4 flex gap-1 text-amber-400">
-                  {[...Array(testimonial.stars)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-4 w-4 fill-amber-400 sm:h-5 sm:w-5"
+        {/* Sliding container */}
+        <div className="relative mt-16 overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(${translateX}%)` }}
+          >
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="w-full sm:w-1/2 px-2 shrink-0">
+                <div className="group relative h-full rounded-lg bg-white p-6 shadow-md sm:p-8">
+                  <div className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-br from-indigo-400/30 via-sky-400/20 to-purple-400/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                  <div className="mb-4 flex gap-1 text-amber-400">
+                    {[...Array(testimonial.stars)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="h-4 w-4 fill-amber-400 sm:h-5 sm:w-5"
+                      />
+                    ))}
+                  </div>
+                  <p className="mb-6 text-base leading-relaxed text-gray-800 sm:text-lg">
+                    “{testimonial.review}”
+                  </p>
+                  <div className="mt-auto flex items-center gap-4">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="h-10 w-10 rounded-full object-cover sm:h-12 sm:w-12"
                     />
-                  ))}
-                </div>
-                <p className="mb-6 text-base leading-relaxed text-gray-800 sm:text-lg">
-                  “{testimonial.review}”
-                </p>
-                <div className="mt-auto flex items-center gap-4">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="h-10 w-10 rounded-full object-cover sm:h-12 sm:w-12"
-                  />
-                  <div className="text-left">
-                    <h4 className="font-semibold text-gray-900">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-xs text-gray-500 sm:text-sm">
-                      Learner from {testimonial.location}
-                    </p>
-                    <p className="text-xs font-medium text-indigo-600">
-                      {testimonial.course}
-                    </p>
+                    <div className="text-left">
+                      <h4 className="font-semibold text-gray-900">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-xs text-gray-500 sm:text-sm">
+                        Learner from {testimonial.location}
+                      </p>
+                      <p className="text-xs font-medium text-[#ff2056]">
+                        {testimonial.course}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-8 flex justify-center gap-6">
+                    <a
+                      href={testimonial.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-md text-sm font-medium transition-all bg-[#ff2056] text-white shadow hover:bg-[#f985a2] h-9 px-4 py-2">
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png"
+                          style={{ height: 20, marginRight: 8 }}
+                          alt="Google Review"
+                        />
+                        View on Google Reviews
+                      </button>
+                    </a>
                   </div>
                 </div>
-                <div className="mt-8 flex justify-center gap-6">
-                  <a
-                    href={testimonial.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button className="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-all bg-indigo-600 text-white shadow hover:bg-indigo-700 h-9 px-4 py-2">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png"
-                        style={{ height: 20, marginRight: 8 }}
-                        alt="Google Review"
-                      />
-                      View on Google Reviews
-                    </button>
-                  </a>
-                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Nav Buttons */}
@@ -216,26 +262,11 @@ const Section8 = () => {
           </button>
           <button
             onClick={handleNext}
-            disabled={currentIndex + cardsPerView >= testimonials.length}
+            disabled={currentIndex >= totalPages - 1}
             className="rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100 p-3 disabled:opacity-30 disabled:cursor-not-allowed"
           >
             <ChevronRight className="h-5 w-5" />
           </button>
-        </div>
-
-        {/* Pagination Dots */}
-        <div className="mt-6 flex justify-center space-x-2">
-          {Array.from({ length: totalPages }).map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentIndex(i * cardsPerView)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentIndex === i * cardsPerView
-                  ? 'bg-indigo-600'
-                  : 'bg-gray-300 hover:bg-indigo-400'
-              }`}
-            ></button>
-          ))}
         </div>
       </div>
     </section>

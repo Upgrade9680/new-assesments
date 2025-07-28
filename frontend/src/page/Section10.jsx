@@ -130,7 +130,6 @@ function Section10() {
               style={{ minWidth: '250px' }}
             >
               <Trophy className="absolute -top-0 right-2 h-5 w-5 text-amber-400" />{' '}
-              {/* ✅ Lucide Trophy */}
               <img
                 src={student.image}
                 alt={student.name}

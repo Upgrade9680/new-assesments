@@ -2,7 +2,7 @@ import Security from '../assets/cybersecurity.png';
 
 function Section6() {
   return (
-    <section className="bg-primary my-10 py-16 text-center text-white">
+    <section className="bg-[#ff2056] my-10 py-16 text-center text-white">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="mt-12 flex flex-col items-center justify-center gap-12 md:flex-row md:gap-20">
           <div className="flex flex-col items-center">

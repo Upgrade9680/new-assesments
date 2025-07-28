@@ -149,7 +149,7 @@ const Section3 = () => {
 
             <button
               type="submit"
-              className="w-full rounded-md bg-indigo-600 px-6 py-2 text-sm font-semibold text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full rounded-md bg-[#ff2056] px-6 py-2 text-sm font-semibold text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
             >
               Enquire Now
             </button>
@@ -190,13 +190,13 @@ const Section3 = () => {
 
             {/* Animated progress line */}
             <span
-              className="absolute left-[11px] top-0 w-[3px] bg-indigo-500 z-10 transition-all duration-100"
+              className="absolute left-[11px] top-0 w-[3px] bg-[#ff2056] z-10 transition-all duration-100"
               style={{ height: `${progressHeight}px` }}
             ></span>
 
             {/* Moving dot */}
             <div
-              className="absolute left-[3px] w-[20px] h-[20px] rounded-full bg-indigo-500 z-20 transition-all duration-100"
+              className="absolute left-[3px] w-[20px] h-[20px] rounded-full bg-[#ff2056] z-20 transition-all duration-100"
               style={{ top: `${progressHeight}px` }}
             ></div>
 
@@ -204,7 +204,7 @@ const Section3 = () => {
             <ul className="space-y-12 mt-6">
               {timelineData.map((item, index) => (
                 <li key={index} className="relative">
-                  <span className="absolute -left-6 mt-2 h-3 w-3 rounded-full bg-indigo-500"></span>
+                  <span className="absolute -left-6 mt-2 h-3 w-3 rounded-full bg-[#ff2056]"></span>
                   <div className="space-y-2">
                     <h3 className="text-lg font-semibold text-gray-900">
                       {item.title}

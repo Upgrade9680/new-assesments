@@ -2,7 +2,7 @@ import { User, Zap, Lightbulb, Check } from 'lucide-react';
 
 const plans = [
   {
-    icon: <User className="h-6 w-6 text-primary" />,
+    icon: <User className="h-6 text-[#ff2056] w-6 " />,
     title: 'Cyber Security Associate',
     description: 'Job ready course for beginners in Cyber Security',
     features: [
@@ -18,7 +18,7 @@ const plans = [
     buttonClass: 'bg-blue-800 hover:bg-gray-700 focus:ring-gray-500',
   },
   {
-    icon: <Zap className="h-6 w-6 text-primary" />,
+    icon: <Zap className="h-6 w-6 text-[#ff2056]" />,
     title: 'Cyber Security Professional',
     description: 'Advanced course to become Cyber Security Professionals',
     features: [
@@ -35,10 +35,10 @@ const plans = [
     ],
     duration: '15 months',
     cardClass: 'bg-gradient-to-b from-indigo-800/30',
-    buttonClass: 'bg-[#ff2056] hover:bg-destructive focus:ring-white',
+    buttonClass: 'bg-[#ff2056] hover:bg-[#ff0040] focus:ring-white',
   },
   {
-    icon: <Lightbulb className="h-6 w-6 text-primary" />,
+    icon: <Lightbulb className="h-6 w-6 text-[#ff2056]" />,
     title: 'Cyber Security Expert',
     description: 'On the road to becoming a Cyber Security Expert',
     features: [

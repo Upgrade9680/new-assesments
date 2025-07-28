@@ -76,7 +76,7 @@ const Section11 = () => {
               }}
               className={`relative rounded-full px-5 py-2 text-sm font-medium transition-colors duration-300 ${
                 activeTab === category
-                  ? 'bg-gradient-to-r from-indigo-500 to-pink-500 text-white shadow-lg'
+                  ? 'bg-gradient-to-r bg-[#ff2056] text-white shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >

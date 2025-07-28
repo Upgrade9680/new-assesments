@@ -26,10 +26,8 @@ const Landingpage = () => {
 
   return (
     <div className="w-full">
-      {/* 🔴 Top Info Bar */}
       <div className="bg-[#ff2056]">
-        <div className="flex items-center justify-between px-4 py-1 text-white text-xs max-w-7xl mx-auto">
-          {/* Left Info */}
+        <div className="flex items-center px-20 justify-between  py-1 text-white text-xs max-w-7xl mx-auto">
           <div>
             <div>Connecting Cyber Networks, Empowering Your Future</div>
             <div className="flex items-center gap-2 mt-1">
@@ -38,7 +36,6 @@ const Landingpage = () => {
             </div>
           </div>
 
-          {/* Right Info */}
           <div className="flex items-center gap-3">
             <img src={Call} alt="call" className="w-5 h-5" />
             <span>+91 77770 97791</span>
@@ -47,17 +44,14 @@ const Landingpage = () => {
         </div>
       </div>
 
-      {/* 🟡 Sticky Navbar */}
-      <div className="bg-white sticky top-0 z-50 border-b shadow-md">
-        <div className="flex justify-between items-center p-2 max-w-7xl mx-auto">
-          {/* Logo */}
+      <div className="bg-white not-[]: sticky top-0 z-50 border-b shadow-md">
+        <div className="flex px-20 justify-between items-center p-2 max-w-7xl mx-auto">
           <img
             src={CompanyLogo}
             alt="Company Logo"
             className="pl-2 w-28 h-10"
           />
 
-          {/* Desktop CTA */}
           <a
             href="#enquiry-form"
             className="hidden lg:inline-block rounded-md bg-[#ff2056] px-6 py-2 text-xs font-semibold text-white shadow"
@@ -65,22 +59,20 @@ const Landingpage = () => {
             ENQUIRE NOW
           </a>
 
-          {/* Mobile Hamburger */}
           <button className="lg:hidden p-2" onClick={toggleMenu}>
             {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-[#ff2056]" />
+              <X className="h-6 w-6 text-[#000]" />
             ) : (
-              <Menu className="h-6 w-6 text-[#ff2056]" />
+              <Menu className="h-6 w-6 text-[#000]" />
             )}
           </button>
         </div>
 
-        {/* Mobile Dropdown */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white shadow-inner px-4 pb-4">
+          <div className="lg:hidden bg-white shadow-inner px-2 pb-4 pt-4">
             <a
               href="#enquiry-form"
-              className="block w-full text-center rounded-md bg-[#ff2056] px-6 py-2 text-xs font-semibold text-white shadow"
+              className="block w-30 text-center rounded-md bg-[#ff2056] px-2 py-1 text-xs font-semibold text-white shadow"
               onClick={() => setMobileMenuOpen(false)}
             >
               ENQUIRE NOW
@@ -89,7 +81,6 @@ const Landingpage = () => {
         )}
       </div>
 
-      {/* 🔵 Sections */}
       <Background />
       <Section1 />
       <Section2 />

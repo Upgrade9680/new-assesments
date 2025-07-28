@@ -39,7 +39,7 @@ const Section2 = () => {
               className="flex items-start gap-3 text-gray-700"
               style={{ opacity: 1, transform: 'none' }}
             >
-              <CircleCheckBig className="mt-0.5 h-5 w-5 flex-shrink-0 text-indigo-600" />
+              <CircleCheckBig className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#ff2056]" />
               <span className="leading-relaxed">{item}</span>
             </li>
           ))}
